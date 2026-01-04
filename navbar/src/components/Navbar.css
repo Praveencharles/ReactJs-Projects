@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav{
+    background-color: #000d83;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    position: sticky;
+    top: 0;
+}
+
+.Title{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+}
+
+nav ul li a{
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav ul li a:not(.active):hover{
+    background-color: #0026ff;
+    transition: 0.2s ease all;
+} 
+
+.active{
+    background-color: #001aff;
+}
+
+.Menu{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Menu span{
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    border-radius: 1rem;
+}
+
+@media (max-width: 480px) {
+    .Menu{
+        display: flex;
+        cursor: pointer;
+    }
+    nav{
+        padding: 15px;
+        flex-direction: column;
+        gap: 2.5rem;
+        height: auto;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    nav ul li{
+        text-align: center;
+        margin: 0.2rem 0.5rem;
+        width: 100%;
+    }
+    nav ul li a{
+        display: block;
+    }
+    nav ul.open{
+        display: flex;
+    }
+}
